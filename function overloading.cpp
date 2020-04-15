@@ -2,23 +2,35 @@
 #include<conio.h>
 using namespace std;
 
-void func(int a, int b)
+class func
 {
-    int sum = a + b;
-    cout<<"Sum = "<<sum<<endl;
-}
+public:
 
-void func(int a, int b,int c)
-{
-    int sum = a + b + c;
-    cout<<"Sum = "<<sum<<endl;
-}
+    void print(int i)
+    {
+      cout<<"printing integer= "<<i<<endl;
 
-int main()
-{
-    func(10,20);
-    func(10,20,30);
+    }
+     void print(double f)
+    {
+      cout<<"printing float= "<<f<<endl;
+
+    }
+     void print(char*c)
+    {
+      cout<<"printing char= "<<c<<endl;
+
+    }
+};
+
+    int main(void)
+    {
+       func ob;
+       ob.print(10);
+       ob.print(13.6);
+       ob.print("Hello");
 
 
-    getch();
-}
+       getch();
+    }
+
